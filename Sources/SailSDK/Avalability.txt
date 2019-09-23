@@ -1,0 +1,15 @@
+NSViewController
+    - macOS 10.5
+UIViewController
+    - iOS 2.0
+    - tvOS 9.0
+UUID
+    - iOS 6.0
+    - macOS 10.8
+    - tvOS 9.0
+    - watchOS 2.0
+Sail
+    - iOS 6.0
+    - macOS 10.8
+    - tvOS 9.0
+    - watchOS 2.0
