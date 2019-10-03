@@ -1,4 +1,4 @@
-# Whats New in Version 5.1
+# Whats New in Version 6.1
 
 ## New Logging System
 
