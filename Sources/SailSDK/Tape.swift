@@ -20,9 +20,9 @@ extension Tape {
 }
 
 /// Report of error
-public struct Report {
+public struct Report: Equatable {
     /// The error reported
-    var report: String
+    public var report: String
     /// Report ID
-    var id: UUID
+    public var id: UUID
 }
