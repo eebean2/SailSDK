@@ -24,3 +24,4 @@ public protocol Sail {
 /// The Sail Delegate, currently uneeded but saved for future versions
 @available(*, unavailable)
 public protocol SailDelegate: class { }
+

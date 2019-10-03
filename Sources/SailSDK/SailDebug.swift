@@ -6,6 +6,12 @@
 //
 
 import Foundation
+import os.log
+#if os(iOS)
+import UIKit
+#endif
+
+typealias Debug = SailDebug
 
 @available(iOS 6.0, macOS 10.8, tvOS 9.0, watchOS 2.0, *)
 public class SailDebug {
@@ -42,17 +48,17 @@ public class SailDebug {
     ///
     /// - Parameter object: The Sail object whos reports are
     /// being fetched
-    public func getReport<Object: Sail>(_ object: Object) {
+    public func getReports<Object: Sail>(_ object: Object) {
         if let tape = objects.first(where: { $0.id == object.id }) {
             if let reports = tape.reports {
                 for j in reports {
-                    print(message: "Object ID: \(tape.id) | Message ID: \(tape.id) |" + j.report)
+                    print("Object ID: \(tape.id) | Message ID: \(tape.id) |" + j.report)
                 }
             } else {
-                print(message: "Object \(tape.id) has no reports")
+                print("Object \(tape.id) has no reports", type: .error)
             }
         } else {
-            print(error: "Object \(object.moduleName) - \(object.id) not found")
+            print("Object \(object.moduleName) - \(object.id) not found", type: .error)
         }
     }
     
@@ -74,7 +80,7 @@ public class SailDebug {
         for tapes in objects {
             guard let reports = tapes.reports else { continue }
             for i in reports {
-                print(message: "ID: \(tapes.id)" + i.report)
+                print("ID: \(tapes.id)" + i.report)
             }
         }
     }
