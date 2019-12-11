@@ -18,11 +18,10 @@ import Foundation
 @available(iOS 6.0, macOS 10.8, tvOS 9.0, watchOS 2.0, *)
 public protocol Sail {
     var id: UUID { get }
-    func moduleName() -> String
 }
 
 extension Sail {
-    func moduleName() -> String {
+    public func moduleName() -> String {
         return String(describing: type(of: self))
     }
 }
