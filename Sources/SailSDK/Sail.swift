@@ -18,7 +18,13 @@ import Foundation
 @available(iOS 6.0, macOS 10.8, tvOS 9.0, watchOS 2.0, *)
 public protocol Sail {
     var id: UUID { get }
-    var moduleName: String { get set }
+    func moduleName() -> String
+}
+
+extension Sail {
+    func moduleName() -> String {
+        return String(describing: type(of: self))
+    }
 }
 
 /// The Sail Delegate, currently uneeded but saved for future versions

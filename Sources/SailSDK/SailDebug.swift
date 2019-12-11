@@ -58,7 +58,7 @@ public class SailDebug {
                 print("Object \(tape.id) has no reports", type: .error)
             }
         } else {
-            print("Object \(object.moduleName) - \(object.id) not found", type: .error)
+            print("Object \(object.moduleName()) - \(object.id) not found", type: .error)
         }
     }
     

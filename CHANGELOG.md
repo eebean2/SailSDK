@@ -1,12 +1,4 @@
-# Whats New in Version 5.1
+# Whats New in Version 6.1.1
 
-## New Logging System
-
-We have updated the logging system to take advantage of Apple's os_log system. This bypasses NSLog and Print to directly write to disk for us on all platforms. Use `Debug.log(...)` and `Debug.print(...)` to access these new functions.
-
-## Debug
-SailDebug now as an alias! Yep, it has gone rogue! Well, not to badly. To quicly access many of the static functions, `Debug` is now able to be used.
-
-# Seperated
-
-All of the UI specific items have been removed to SailKit.
+## Re-mapped Module Name
+The module name is now dynamic and creates itself in a function, the only required parameter is the module ID, which is unique to each object.
